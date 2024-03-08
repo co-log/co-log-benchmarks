@@ -67,29 +67,12 @@ library.
 To run benchmarks, use the following command:
 
 ```
-cabal v2-run co-log-bench
+cabal v2-run co-log-bench -- --svg bench.svg &> /dev/null
 ```
 
-| Benchmarks                                              | Time for 10K messages |
-| :------------------------------------------------------ | :-------------------- |
-| `Prelude.putStrLn`                                      | `  5.117ms`           |
-| `Text.putStrLn`                                         | `  9.220ms`           |
-| `ByteString.putStrLn`                                   | `  2.971ms`           |
-| `mempty`                                                | `  1.181ms`           |
-| `logStringStdout`                                       | `  5.107ms`           |
-| `logPrint`                                              | `  5.248ms`           |
-| `logTextStdout`                                         | `  5.351ms`           |
-| `logByteStringStdout`                                   | `  2.933ms`           |
-| `logByteStringStderr`                                   | ` 17.482ms`           |
-| `ByteString > (stdout <> stderr)`                       | ` 17.715ms`           |
-| `Message > format > stdout`                             | `  9.188ms`           |
-| `Message > format > ByteString > stdout`                | `  3.524ms`           |
-| `Message{callstack} > format > stdout`                  | `  9.139ms`           |
-| `Message{callstack:5} > format > stdout`                | `  9.464ms`           |
-| `Message{callstack:50} > format > stdout`               | `  9.439ms`           |
-| `Message{Time,ThreadId} > format > stdout`              | ` 54.160ms`           |
-| `Message{Time,ThreadId} > format > ByteString > stdout` | ` 54.137ms`           |
+**Time for 10K messages:**
 
+![Benchmarks](bench.svg)
 
 [hk-img]: https://img.shields.io/hackage/v/co-log.svg?logo=haskell
 [hk-img-ps]: https://img.shields.io/hackage/v/co-log-polysemy.svg?logo=haskell
