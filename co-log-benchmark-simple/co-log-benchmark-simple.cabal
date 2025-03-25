@@ -8,8 +8,8 @@ description:         Set of benchmarks that can be used to verify
 license:             MPL-2.0
 license-file:        LICENSE
 author:              Alexander Vershilov, Kowainik
-maintainer:          Kowainik
-copyright:           2018-2020 Kowainik, 2021-2023 co-log
+maintainer:          co-log
+copyright:           2018-2020 Kowainik, 2021-2025 co-log
 category:            Logging, Benchmarks
 build-type:          Simple
 extra-source-files:  CHANGELOG.md
