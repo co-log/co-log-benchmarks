@@ -13,7 +13,7 @@ copyright:           2018-2020 Kowainik, 2021-2023 co-log
 category:            Logging, Benchmarks
 build-type:          Simple
 extra-source-files:  CHANGELOG.md
-tested-with:         GHC == 9.6.3
+tested-with:         GHC == 9.8.4
 
 source-repository head
   type:              git
@@ -23,7 +23,7 @@ executable co-log-bench
   main-is:             Main.hs
   if os(windows)
     buildable: False
-  build-depends:       base >= 4.14 && < 4.19
+  build-depends:       base >= 4.14 && < 4.22
                      , bytestring
                      , co-log
                      , tasty-bench
