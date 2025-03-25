@@ -16,14 +16,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest]
-        cabal: ["3.6"]
+        cabal: ["3.14"]
         ghc:
-          - "8.10.7"
+          - "9.8.4"
 
     steps:
     - uses: actions/checkout@v4
 
-    - uses: haskell/actions/setup@v2
+    - uses: haskell-actions/setup@v2
       id: setup-haskell-cabal
       name: Setup Haskell
       with:
