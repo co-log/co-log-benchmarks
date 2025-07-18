@@ -13,7 +13,7 @@ copyright:           2018-2020 Kowainik, 2021-2025 co-log
 category:            Logging, Benchmarks
 build-type:          Simple
 extra-source-files:  CHANGELOG.md
-tested-with:         GHC == 9.8.4
+tested-with:         GHC == 9.12.2
 
 source-repository head
   type:              git
